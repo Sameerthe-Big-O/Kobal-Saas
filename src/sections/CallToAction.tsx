@@ -2,7 +2,6 @@
 import ArrowRight from "@/assets/arrow-right.svg";
 import Star from "@/assets/star.png";
 import Spring from "@/assets/spring.png";
-import Image from "next/image";
 import { useTransform, motion, useScroll } from "framer-motion";
 import { useRef } from "react";
 export const CallToAction = () => {
@@ -35,7 +34,9 @@ export const CallToAction = () => {
     />
     <motion.img src={Spring.src} alt="Spring Image"
       width={250} height={250}
-      className="-right-12 absolute bottom-6 rotate-30 lg:right-0 max-md:hidden"
+      className="-right-12 absolute bottom-6 rotate-30 lg:right-0 max-md:hidden
+      lg:2-[300px] lg:height-[300px]
+      "
       style={{
         translateY: translateY,
       }}
