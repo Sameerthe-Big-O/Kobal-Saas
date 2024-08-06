@@ -35,15 +35,17 @@ export const LogoTicker = () => {
           }}
         >
           {
-            logoArray.map(logo => (
+            logoArray.map((logo, i) => (
               <Image src={logo} alt='brand'
+                key={i}
                 className='logo-ticker-image'
               />
             ))
           }
           {
-            logoArray.map(logo => (
+            logoArray.map((logo, i) => (
               <Image src={logo} alt='brand'
+                key={i}
                 className='logo-ticker-image'
               />
             ))
