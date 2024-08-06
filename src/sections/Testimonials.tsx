@@ -76,7 +76,7 @@ const thirdColumn = testimonials.slice(6, 9);
 export const Testimonials = () => {
 
   return (
-    <section className="wrapper bg-white py-10">
+    <section className="wrapper bg-white pt-10">
       <div className="max-w-[400px] mx-auto text-center">
         <div className="inline-flex section-title mt-10">Testimonials</div>
         <h2 className="section-description">What our users say</h2>
