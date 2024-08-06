@@ -70,6 +70,7 @@ export const ProductShowcase = () => {
             style={{
               translateY: translateY,
             }}
+
           />
           <motion.img
             src={SocialInsta.src}

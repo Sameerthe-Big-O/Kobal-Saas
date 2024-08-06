@@ -124,7 +124,7 @@ export const Testimonials = () => {
               translateY: '-50%'
             }}
             transition={{
-              duration: 8,
+              duration: 10,
               repeat: Infinity,
               repeatType: "loop",
               ease: 'linear',
@@ -158,7 +158,7 @@ export const Testimonials = () => {
               translateY: '-50%'
             }}
             transition={{
-              duration: 7,
+              duration: 10,
               repeat: Infinity,
               repeatType: "loop",
               ease: 'linear',

@@ -1,5 +1,4 @@
 'use client'
-import "./her.css";
 import Cog from "@/assets/cog.png";
 import Image from "next/image";
 import ArrowRight from "@/assets/arrow-right.svg";
@@ -15,6 +14,8 @@ export const Hero = () => {
     target: heroRef,
     offset: ["start end", "end end"]
   });
+  //offset we basically tell that we shoudld it start and end
+  //*useTransform let's us control the starting and ending value
   const transFormY = useTransform(scrollYProgress, [0, 1], [150, -150]);
 
   useMotionValueEvent(scrollYProgress, 'change', (value) => console.log(value))

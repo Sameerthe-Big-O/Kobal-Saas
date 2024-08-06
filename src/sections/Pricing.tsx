@@ -1,7 +1,8 @@
+'use client'
 import CheckIcon from "@/assets/check.svg";
-import { useTransform, motion } from "framer-motion";
+import { useTransform, motion, useScroll } from "framer-motion";
 import { twMerge } from "tailwind-merge";
-
+import { useRef } from "react";
 const pricingTiers = [
   {
     title: "Free",
@@ -60,8 +61,17 @@ const pricingTiers = [
 //*created utility
 //*
 export const Pricing = () => {
+  const refSec = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: refSec,
+    offset: ['start end', 'end start']
+  });
+  const translateY = useTransform(scrollYProgress, [0, 1], [170, -170])
   return (
-    <section className="wrapper py-20 bg-white">
+    <section
+
+      ref={refSec}
+      className="wrapper py-20 bg-white">
       <div className="max-w-[400px] mx-auto text-center">
         <h3 className="section-title mt-10">Pricing</h3>
         <p className="section-description text-[21px] mt-4">
@@ -71,8 +81,11 @@ export const Pricing = () => {
       </div>
       <div className="mt-20 flex max-lg:flex-col gap-10 lg:items-end lg:justify-center">
         {pricingTiers.map((tier, index) => (
-          <div
+          <motion.div
             key={index}
+            style={{
+              translateY: translateY,
+            }}
             className={twMerge("p-10 border-[#e0dfdf] border-[2px] rounded-3xl shadow-[0_7px_14px_#EAEAEA] w-full max-w-[400px] mx-auto", tier.inverse === true && 'border-black text-white bg-black')}
           >
             <div className="header mb-4 flex justify-between">
@@ -102,7 +115,7 @@ export const Pricing = () => {
                 </li>
               ))}
             </ul>
-          </div>
+          </motion.div>
         ))}
       </div>
     </section >

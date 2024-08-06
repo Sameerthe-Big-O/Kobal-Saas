@@ -27,15 +27,17 @@ export const CallToAction = () => {
       </div>
     </div>
     <motion.img src={Star.src} alt="star image" width={250} height={250}
-      className="-left-32 absolute top-0 rotate-30 lg:left-10 max-md:hidden"
+      className="-left-32 absolute top-0 rotate-30 lg:left-10 max-md:hidden
+      lg:w-[320px] lg:h-[320px]
+      "
       style={{
         translateY: translateY,
       }}
     />
     <motion.img src={Spring.src} alt="Spring Image"
       width={250} height={250}
-      className="-right-12 absolute bottom-6 rotate-30 lg:right-0 max-md:hidden
-      lg:2-[300px] lg:height-[300px]
+      className="-right-12 lg:bottom-0 absolute bottom-6 rotate-30 lg:right-0 max-md:hidden
+      lg:w-[320px] lg:h-[320px]
       "
       style={{
         translateY: translateY,
